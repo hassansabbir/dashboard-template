@@ -1,16 +1,8 @@
 import { Menu } from "antd";
 import { useEffect, useState } from "react";
-import {
-  MdCancelPresentation,
-  MdCategory,
-  MdFeaturedPlayList,
-  MdMiscellaneousServices,
-} from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
 import { IoIosLogOut } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
-
 import { PiUserPlus } from "react-icons/pi";
 import Cookies from "js-cookie";
 import logo from "../../assets/logo.png";
@@ -50,40 +42,30 @@ const Sidebar = () => {
       icon: <CiGrid32 size={24} />,
       label: (
         <Link to="/" className="">
-          Dashboard
+          Overview
         </Link>
       ),
     },
 
     {
-      key: "/staff-list",
+      key: "/users",
       icon: <PiUserPlus size={24} />,
-      label: <Link to="/staff-list">Staff List</Link>,
+      label: <Link to="/users">User Management</Link>,
     },
     {
-      key: "/clients",
+      key: "/app-videos",
       icon: <FaUsers size={24} />,
-      label: <Link to="/clients">Clients</Link>,
+      label: <Link to="/app-videos">App Videos</Link>,
     },
     {
-      key: "/quote-update",
+      key: "/subscription-plan",
       icon: <ImFolderUpload size={24} />,
-      label: <Link to="/quote-update">Quote Update</Link>,
+      label: <Link to="/subscription-plan">Subscription Plan</Link>,
     },
     {
-      key: "/quote-history",
+      key: "/subscribers",
       icon: <FaHistory size={24} />,
-      label: <Link to="/quote-history">Quote History</Link>,
-    },
-    {
-      key: "/standard-recipe",
-      icon: <GiFertilizerBag size={24} />,
-      label: <Link to="/standard-recipe">Standard Recipe</Link>,
-    },
-    {
-      key: "/raw-material",
-      icon: <SiMaterialdesignicons size={24} />,
-      label: <Link to="/raw-material">Raw Material</Link>,
+      label: <Link to="/subscribers">Subscribers</Link>,
     },
     {
       key: "subMenuSetting",
@@ -111,6 +93,14 @@ const Sidebar = () => {
         },
 
         {
+          key: "/support-request",
+          label: (
+            <Link to="/support-request" className="text-white hover:text-white">
+              Support Request
+            </Link>
+          ),
+        },
+        {
           key: "/about-us",
           label: (
             <Link to="/about-us" className="text-white hover:text-white">
@@ -133,15 +123,7 @@ const Sidebar = () => {
           key: "/privacy-policy",
           label: (
             <Link to="/privacy-policy" className="text-white hover:text-white">
-              App Support
-            </Link>
-          ),
-        },
-        {
-          key: "/f-a-q",
-          label: (
-            <Link to="/f-a-q" className="text-white hover:text-white">
-              FAQ
+              Privacy Policy
             </Link>
           ),
         },
@@ -187,7 +169,7 @@ const Sidebar = () => {
           to={"/"}
           className="mb-10 flex items-center flex-col gap-2 justify-center py-4"
         >
-          <img src={logo} alt="" />
+          <img src={logo} alt="" className="w-40" />
         </Link>
       </div>
       <Menu

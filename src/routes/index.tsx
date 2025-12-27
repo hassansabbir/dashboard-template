@@ -14,18 +14,9 @@ import Notifications from "../Pages/Dashboard/Notifications";
 import User from "../Pages/Dashboard/User";
 import UserProfile from "../Pages/Dashboard/AdminProfile/UserProfile";
 import TermsAndCondition from "../Pages/Dashboard/TermsAndCondition";
-import Vendors from "../Pages/Dashboard/Vendors";
-import Faq from "../Pages/Dashboard/Faq";
 import AboutUs from "../components/ui/Settings/AboutUs";
 import OfferList from "../components/ui/Settings/OfferList";
-import Orders from "../Pages/Dashboard/Orders";
-import Vendor from "../Pages/Dashboard/Vendor";
-import QuoteHistory from "../Pages/Dashboard/QuoteHistory";
-import QuoteUpdate from "../Pages/Dashboard/QuoteUpdate";
-import RawMaterial from "../Pages/Dashboard/RawMaterial";
-import StandardRecipe from "../Pages/Dashboard/StandardRecipe";
-import SingleQuoteUpdate from "../Pages/Dashboard/SingleQuoteUpdate";
-import SingleQuoteHistory from "../Pages/Dashboard/SingleQuoteHistory";
+import AppVideos from "@/Pages/Dashboard/AppVideos";
 
 const router = createBrowserRouter([
   {
@@ -42,46 +33,17 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/clients",
+        path: "/users",
         element: <Users />,
       },
       {
-        path: "/client/profile/:id",
+        path: "/users/profile/:id",
         element: <User />,
       },
       {
-        path: "/staff-list",
-        element: <Vendors />,
+        path: "/app-videos",
+        element: <AppVideos />,
       },
-      {
-        path: "/staff/profile/:id",
-        element: <Vendor />,
-      },
-      {
-        path: "/quote-history",
-        element: <QuoteHistory />,
-      },
-      {
-        path: "/quote-history/:id",
-        element: <SingleQuoteHistory />,
-      },
-      {
-        path: "/quote-details/:id",
-        element: <SingleQuoteUpdate />,
-      },
-      {
-        path: "/quote-update",
-        element: <QuoteUpdate />,
-      },
-      {
-        path: "/raw-material",
-        element: <RawMaterial />,
-      },
-      {
-        path: "/standard-recipe",
-        element: <StandardRecipe />,
-      },
-
       {
         path: "/personal-information",
         element: <UserProfile />,
@@ -89,11 +51,6 @@ const router = createBrowserRouter([
       {
         path: "/change-password",
         element: <ChangePassword />,
-      },
-
-      {
-        path: "f-a-q",
-        element: <Faq />,
       },
       {
         path: "about-us",
@@ -103,11 +60,6 @@ const router = createBrowserRouter([
         path: "offer-list",
         element: <OfferList />,
       },
-      {
-        path: "orders",
-        element: <Orders />,
-      },
-
       {
         path: "/privacy-policy",
         element: <PrivacyPolicy />,
